@@ -1,9 +1,10 @@
 import {React} from 'react'
 import Client from './client'
 
-const ListClients = () => {
-    let clients = JSON.parse(sessionStorage.getItem("list"))
+const ListClients = ({clients}) => {
 
+    const list = Array.from(clients)
+    console.log(list)
     if(sessionStorage.getItem("list") !== null) {
         return (
             <div>
